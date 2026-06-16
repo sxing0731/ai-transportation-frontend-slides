@@ -571,6 +571,13 @@
   .ai-different .node h3 { font-size: clamp(1.35rem, 2.35vw, 2rem); }
   .ai-process .node p,
   .ai-different .node p { font-size: clamp(1rem, 1.45vw, 1.28rem); line-height: 1.42; }
+  .ai-different .node p {
+    font-size: clamp(1.18rem, 1.75vw, 1.58rem) !important;
+    line-height: 1.32 !important;
+  }
+  .ai-different .node h3 {
+    font-size: clamp(1.45rem, 2.55vw, 2.18rem) !important;
+  }
   .s-process2 .node .n {
     font-size: clamp(.9rem, 1.15vw, 1.05rem) !important;
   }
@@ -631,8 +638,8 @@
     grid-row: 3 / span 5;
     padding: 24px;
     display: grid;
-    grid-template-rows: auto 1fr auto 1fr auto 1fr;
-    gap: 10px;
+    grid-template-rows: auto repeat(5, 1fr);
+    gap: 8px;
     border: 1.5px solid rgba(234,244,246,.12);
   }
   .ai-pdf-flow .lane-weak { grid-column: 1 / span 6; }
@@ -647,7 +654,7 @@
   .ai-pdf-flow .flow-step {
     background: rgba(16,43,52,.08);
     border: 1.5px solid rgba(16,43,52,.24);
-    padding: 14px 16px;
+    padding: 10px 14px;
     display: grid;
     grid-template-columns: auto 1fr;
     column-gap: 12px;
@@ -664,15 +671,15 @@
     line-height: 1.25;
   }
   .ai-pdf-flow .flow-step strong {
-    font-size: clamp(1.15rem, 1.65vw, 1.55rem);
+    font-size: clamp(1rem, 1.38vw, 1.28rem);
     line-height: 1.05;
     text-transform: uppercase;
   }
   .ai-pdf-flow .flow-step p {
     grid-column: 2;
-    margin: 5px 0 0;
-    font-size: clamp(.92rem, 1.25vw, 1.12rem);
-    line-height: 1.32;
+    margin: 4px 0 0;
+    font-size: clamp(.82rem, 1.08vw, 1rem);
+    line-height: 1.24;
   }
   .ai-pdf-flow .flow-step.danger {
     background: rgba(16,43,52,.18);
@@ -1827,12 +1834,12 @@
 
     <div class="frame">
       <div class="head"><h2 data-edit-slot="s2-title" data-slot-type="text" data-slot-label="What changed in the last two years?" data-slot-locked-layout="true">What changed in the last two years?</h2><div class="sub">The practical shift is not smarter chat. It is file-aware, tool-using, iterative assistance.</div></div>
-      <div class="node n1"><div class="n">2023</div><h3 data-edit-slot="s2-n1-title" data-slot-type="text" data-slot-label="Chatbot" data-slot-locked-layout="true">Chatbot</h3><p data-edit-slot="s2-n1-body" data-slot-type="text" data-slot-label="Answer a question or draft a paragraph." data-slot-locked-layout="true">Answer a question or draft a paragraph.</p><div class="arr">→</div></div>
-      <div class="node n2"><div class="n">2024</div><h3 data-edit-slot="s2-n2-title" data-slot-type="text" data-slot-label="Copilot" data-slot-locked-layout="true">Copilot</h3><p data-edit-slot="s2-n2-body" data-slot-type="text" data-slot-label="Work inside files, code, and documents." data-slot-locked-layout="true">Work inside files, code, and documents.</p><div class="arr">→</div></div>
-      <div class="node n3"><div class="n">2025</div><h3 data-edit-slot="s2-n3-title" data-slot-type="text" data-slot-label="Agent" data-slot-locked-layout="true">Agent</h3><p data-edit-slot="s2-n3-body" data-slot-type="text" data-slot-label="Plan steps, use tools, check outputs." data-slot-locked-layout="true">Plan steps, use tools, check outputs.</p><div class="arr">→</div></div>
-      <div class="node n4"><div class="n">2026</div><h3 data-edit-slot="s2-n4-title" data-slot-type="text" data-slot-label="Workflow assistant" data-slot-locked-layout="true">Workflow assistant</h3><p data-edit-slot="s2-n4-body" data-slot-type="text" data-slot-label="Draft reviewed artifacts for humans." data-slot-locked-layout="true">Draft reviewed artifacts for humans.</p><div class="arr">→</div></div>
+      <div class="node n1"><div class="n">2023</div><h3 data-edit-slot="s2-n1-title" data-slot-type="text" data-slot-label="Chatbot" data-slot-locked-layout="true">Chatbot</h3><p data-edit-slot="s2-n1-body" data-slot-type="text" data-slot-label="Answer from prompt context; can sound complete without evidence coverage." data-slot-locked-layout="true">Answer from prompt context; can sound complete without evidence coverage.</p><div class="arr">鈫?/div></div>
+      <div class="node n2"><div class="n">2024</div><h3 data-edit-slot="s2-n2-title" data-slot-type="text" data-slot-label="Copilot" data-slot-locked-layout="true">Copilot</h3><p data-edit-slot="s2-n2-body" data-slot-type="text" data-slot-label="Work inside files, code, and documents, but still needs user direction." data-slot-locked-layout="true">Work inside files, code, and documents, but still needs user direction.</p><div class="arr">鈫?/div></div>
+      <div class="node n3"><div class="n">2025</div><h3 data-edit-slot="s2-n3-title" data-slot-type="text" data-slot-label="Agent" data-slot-locked-layout="true">Agent</h3><p data-edit-slot="s2-n3-body" data-slot-type="text" data-slot-label="Breaks tasks into steps, uses tools, and checks outputs before continuing." data-slot-locked-layout="true">Breaks tasks into steps, uses tools, and checks outputs before continuing.</p><div class="arr">鈫?/div></div>
+      <div class="node n4"><div class="n">2026</div><h3 data-edit-slot="s2-n4-title" data-slot-type="text" data-slot-label="Workflow assistant" data-slot-locked-layout="true">Workflow assistant</h3><p data-edit-slot="s2-n4-body" data-slot-type="text" data-slot-label="Produces reviewed artifacts with citations, gaps, and QA flags for humans." data-slot-locked-layout="true">Produces reviewed artifacts with citations, gaps, and QA flags for humans.</p><div class="arr">鈫?/div></div>
       <div class="node n5 ai-image-node"><div class="ph ai-img" style="background-image:url('assets/ai_wide_signal_16x10.png')" data-edit-slot="s2-image" data-slot-type="image" data-slot-label="Wide 16:10 signal workflow comic" data-slot-locked-layout="true"></div></div>
-      <div class="node out"><div class="n">NEW BEHAVIOR</div><h3 data-edit-slot="s2-out-title" data-slot-type="text" data-slot-label="Uses context" data-slot-locked-layout="true">Uses context</h3><p data-edit-slot="s2-out-body" data-slot-type="text" data-slot-label="Reads project materials, runs scripts, and iterates after checking results." data-slot-locked-layout="true">Reads project materials, runs scripts, and iterates after checking results.</p></div>
+      <div class="node out"><div class="n">NEW BEHAVIOR</div><h3 data-edit-slot="s2-out-title" data-slot-type="text" data-slot-label="Evidence loop" data-slot-locked-layout="true">Evidence loop</h3><p data-edit-slot="s2-out-body" data-slot-type="text" data-slot-label="Retrieve, read, cite, test, revise, and disclose what was not checked." data-slot-locked-layout="true">Retrieve, read, cite, test, revise, and disclose what was not checked.</p></div>
       <div class="timeline"><span>Prompt</span><span>Files</span><span>Tools</span><span>Checks</span><span>Artifact</span><span>Review</span></div>
     </div>
     <aside class="speaker-notes" hidden>This slide is the central evolution story. Avoid AI architecture. Emphasize observable behavior: files, tools, checks, and output artifacts.</aside>
@@ -1850,8 +1857,9 @@
       <div class="head"><h2 data-edit-slot="s3-title" data-slot-type="text" data-slot-label="Skill vs<br/>Agent" data-slot-locked-layout="true">Skill vs<br/>Agent</h2><div class="sub">A skill answers a narrow request. An agent coordinates steps toward a deliverable.</div></div>
       <div class="table">
         <div class="cell head-row">Dimension</div><div class="cell head-row">Skill / Chat</div><div class="cell head-row">Agent</div><div class="cell head-row">Transport example</div>
-        <div class="cell row-label">Input</div><div class="cell">Prompt only</div><div class="cell">Prompt + files + goals</div><div class="cell">Model run folder</div>
-        <div class="cell row-label">Action</div><div class="cell">Single answer</div><div class="cell">Multi-step work</div><div class="cell">Extract, compare, summarize</div>
+        <div class="cell row-label">Input</div><div class="cell">Prompt or a few retrieved chunks</div><div class="cell">Prompt + files + goals + checklist</div><div class="cell">Model run folder</div>
+        <div class="cell row-label">Action</div><div class="cell">Single answer from visible context</div><div class="cell">Multi-step work with checks</div><div class="cell">Extract, compare, summarize</div>
+        <div class="cell row-label">Evidence</div><div class="cell">May omit unread pages</div><div class="cell">Tracks citations and gaps</div><div class="cell">Page-linked memo table</div>
         <div class="cell row-label">Output</div><div class="cell">Text draft</div><div class="cell">Reviewed artifact</div><div class="cell">Memo, script, table</div>
         <div class="cell row-label last">Human role</div><div class="cell last"><span class="pill part">Ask better</span></div><div class="cell last"><span class="pill yes">Review better</span></div><div class="cell last"><span class="pill no">Engineer decides</span></div>
       </div>
@@ -1869,8 +1877,8 @@
 
     <div class="frame">
       <div class="head"><h2 data-edit-slot="s4-title" data-slot-type="text" data-slot-label="What AI can do today" data-slot-locked-layout="true">What AI can do today</h2><div class="label">Realistic assistant roles</div></div>
-      <div class="feat"><div class="pic"><div class="ph ai-img" style="background-image:url('assets/ai_wide_signal_16x10.png')" data-edit-slot="s4-img1" data-slot-type="image" data-slot-label="Wide 16:10 signal analysis assistant comic" data-slot-locked-layout="true"></div><div class="tag">01</div></div><h3 data-edit-slot="s4-f1-title" data-slot-type="text" data-slot-label="Junior analyst" data-slot-locked-layout="true">Junior analyst</h3><p data-edit-slot="s4-f1-body" data-slot-type="text" data-slot-label="Summarize reports, compare alternatives, draft first-pass findings." data-slot-locked-layout="true">Summarize reports, compare alternatives, draft first-pass findings.</p></div>
-      <div class="feat"><div class="pic"><div class="ph ai-img" style="background-image:url('assets/ai_wide_model_16x10.png')" data-edit-slot="s4-img2" data-slot-type="image" data-slot-label="Wide 16:10 demand modeling assistant comic" data-slot-locked-layout="true"></div><div class="tag">02</div></div><h3 data-edit-slot="s4-f2-title" data-slot-type="text" data-slot-label="Review assistant" data-slot-locked-layout="true">Review assistant</h3><p data-edit-slot="s4-f2-body" data-slot-type="text" data-slot-label="Check consistency across tables, figures, assumptions, and language." data-slot-locked-layout="true">Check consistency across tables, figures, assumptions, and language.</p></div>
+      <div class="feat"><div class="pic"><div class="ph ai-img" style="background-image:url('assets/ai_wide_signal_16x10.png')" data-edit-slot="s4-img1" data-slot-type="image" data-slot-label="Wide 16:10 signal analysis assistant comic" data-slot-locked-layout="true"></div><div class="tag">01</div></div><h3 data-edit-slot="s4-f1-title" data-slot-type="text" data-slot-label="PDF analyst" data-slot-locked-layout="true">PDF analyst</h3><p data-edit-slot="s4-f1-body" data-slot-type="text" data-slot-label="Read by chapter, list data sources, methods, metrics, limitations, and page evid" data-slot-locked-layout="true">Read by chapter, list data sources, methods, metrics, limitations, and page evidence.</p></div>
+      <div class="feat"><div class="pic"><div class="ph ai-img" style="background-image:url('assets/ai_wide_model_16x10.png')" data-edit-slot="s4-img2" data-slot-type="image" data-slot-label="Wide 16:10 demand modeling assistant comic" data-slot-locked-layout="true"></div><div class="tag">02</div></div><h3 data-edit-slot="s4-f2-title" data-slot-type="text" data-slot-label="Review assistant" data-slot-locked-layout="true">Review assistant</h3><p data-edit-slot="s4-f2-body" data-slot-type="text" data-slot-label="Check consistency across tables, figures, assumptions, citations, and language." data-slot-locked-layout="true">Check consistency across tables, figures, assumptions, citations, and language.</p></div>
       <div class="feat"><div class="pic"><div class="ph ai-img" style="background-image:url('assets/ai_wide_gis_16x10.png')" data-edit-slot="s4-img3" data-slot-type="image" data-slot-label="Wide 16:10 GIS coding assistant comic" data-slot-locked-layout="true"></div><div class="tag">03</div></div><h3 data-edit-slot="s4-f3-title" data-slot-type="text" data-slot-label="GIS + coding helper" data-slot-locked-layout="true">GIS + coding helper</h3><p data-edit-slot="s4-f3-body" data-slot-type="text" data-slot-label="Generate ArcPy scripts, clean datasets, automate recurring processing." data-slot-locked-layout="true">Generate ArcPy scripts, clean datasets, automate recurring processing.</p></div>
     </div>
     <aside class="speaker-notes" hidden>Keep claims grounded. It can draft, organize, check, and automate. It cannot independently certify engineering decisions.</aside>
@@ -1904,12 +1912,12 @@
 
     <div class="frame">
       <div class="head"><h2 data-edit-slot="s6-title" data-slot-type="text" data-slot-label="What makes AI different from traditional software?" data-slot-locked-layout="true">What makes AI different from traditional software?</h2><div class="sub">Traditional tools require fixed workflows. AI can interpret messy context and help shape the workflow.</div></div>
-      <div class="node n1"><div class="n">01</div><h3 data-edit-slot="s6-d1-title" data-slot-type="text" data-slot-label="Understands messy inputs" data-slot-locked-layout="true">Understands messy inputs</h3><p data-edit-slot="s6-d1-body" data-slot-type="text" data-slot-label="Memos, PDFs, tables, emails, and model notes." data-slot-locked-layout="true">Memos, PDFs, tables, emails, and model notes.</p><div class="arr">→</div></div>
-      <div class="node n2"><div class="n">02</div><h3 data-edit-slot="s6-d2-title" data-slot-type="text" data-slot-label="Adapts to intent" data-slot-locked-layout="true">Adapts to intent</h3><p data-edit-slot="s6-d2-body" data-slot-type="text" data-slot-label="Can reframe output for planner, engineer, or stakeholder." data-slot-locked-layout="true">Can reframe output for planner, engineer, or stakeholder.</p><div class="arr">→</div></div>
-      <div class="node n3"><div class="n">03</div><h3 data-edit-slot="s6-d3-title" data-slot-type="text" data-slot-label="Uses tools" data-slot-locked-layout="true">Uses tools</h3><p data-edit-slot="s6-d3-body" data-slot-type="text" data-slot-label="Runs code, processes files, creates draft artifacts." data-slot-locked-layout="true">Runs code, processes files, creates draft artifacts.</p><div class="arr">→</div></div>
-      <div class="node n4"><div class="n">04</div><h3 data-edit-slot="s6-d4-title" data-slot-type="text" data-slot-label="Iterates" data-slot-locked-layout="true">Iterates</h3><p data-edit-slot="s6-d4-body" data-slot-type="text" data-slot-label="Checks outputs and adjusts instead of stopping at one answer." data-slot-locked-layout="true">Checks outputs and adjusts instead of stopping at one answer.</p><div class="arr">→</div></div>
-      <div class="node n5"><div class="n">LIMIT</div><h3 data-edit-slot="s6-d5-title" data-slot-type="text" data-slot-label="Still probabilistic" data-slot-locked-layout="true">Still probabilistic</h3><p data-edit-slot="s6-d5-body" data-slot-type="text" data-slot-label="Requires explicit QA and domain judgment." data-slot-locked-layout="true">Requires explicit QA and domain judgment.</p></div>
-      <div class="node out"><div class="n">RESULT</div><h3 data-edit-slot="s6-out-title" data-slot-type="text" data-slot-label="Flexible assistant" data-slot-locked-layout="true">Flexible assistant</h3><p data-edit-slot="s6-out-body" data-slot-type="text" data-slot-label="More like a junior analyst than a menu-driven application." data-slot-locked-layout="true">More like a junior analyst than a menu-driven application.</p></div>
+      <div class="node n1"><div class="n">01</div><h3 data-edit-slot="s6-d1-title" data-slot-type="text" data-slot-label="Handles messy context" data-slot-locked-layout="true">Handles messy context</h3><p data-edit-slot="s6-d1-body" data-slot-type="text" data-slot-label="Memos, PDFs, tables, emails, model notes, and rough instructions can all become " data-slot-locked-layout="true">Memos, PDFs, tables, emails, model notes, and rough instructions can all become working context.</p><div class="arr">鈫?/div></div>
+      <div class="node n2"><div class="n">02</div><h3 data-edit-slot="s6-d2-title" data-slot-type="text" data-slot-label="Adapts to intent" data-slot-locked-layout="true">Adapts to intent</h3><p data-edit-slot="s6-d2-body" data-slot-type="text" data-slot-label="The same source can become planner summary, engineer checklist, stakeholder brie" data-slot-locked-layout="true">The same source can become planner summary, engineer checklist, stakeholder brief, or QA table.</p><div class="arr">鈫?/div></div>
+      <div class="node n3"><div class="n">03</div><h3 data-edit-slot="s6-d3-title" data-slot-type="text" data-slot-label="Uses tools" data-slot-locked-layout="true">Uses tools</h3><p data-edit-slot="s6-d3-body" data-slot-type="text" data-slot-label="It can run scripts, inspect files, create artifacts, and revise after seeing con" data-slot-locked-layout="true">It can run scripts, inspect files, create artifacts, and revise after seeing concrete outputs.</p><div class="arr">鈫?/div></div>
+      <div class="node n4"><div class="n">04</div><h3 data-edit-slot="s6-d4-title" data-slot-type="text" data-slot-label="Builds evidence loops" data-slot-locked-layout="true">Builds evidence loops</h3><p data-edit-slot="s6-d4-body" data-slot-type="text" data-slot-label="Better workflows force citations, page checks, assumptions, exceptions, and unre" data-slot-locked-layout="true">Better workflows force citations, page checks, assumptions, exceptions, and unread gaps.</p><div class="arr">鈫?/div></div>
+      <div class="node n5"><div class="n">LIMIT</div><h3 data-edit-slot="s6-d5-title" data-slot-type="text" data-slot-label="Still needs QA" data-slot-locked-layout="true">Still needs QA</h3><p data-edit-slot="s6-d5-body" data-slot-type="text" data-slot-label="It can miss pages, parse tables poorly, or generalize unless the task requires e" data-slot-locked-layout="true">It can miss pages, parse tables poorly, or generalize unless the task requires evidence discipline.</p></div>
+      <div class="node out"><div class="n">RESULT</div><h3 data-edit-slot="s6-out-title" data-slot-type="text" data-slot-label="Junior analyst" data-slot-locked-layout="true">Junior analyst</h3><p data-edit-slot="s6-out-body" data-slot-type="text" data-slot-label="Useful for first-pass work; accountable professionals still scope, verify, and d" data-slot-locked-layout="true">Useful for first-pass work; accountable professionals still scope, verify, and decide.</p></div>
       <div class="timeline"><span>Context</span><span>Intent</span><span>Tools</span><span>Draft</span><span>QA</span><span>Decision</span></div>
     </div>
     <aside class="speaker-notes" hidden>The important distinction is flexibility. But flexibility also introduces variability, so QA is non-negotiable.</aside>
@@ -1925,31 +1933,31 @@
 
     <div class="frame">
       <div class="flow-head card lemon">
-        <h2 data-edit-slot="s7-title" data-slot-type="text" data-slot-label="Why AI may miss details in a PDF" data-slot-locked-layout="true">Why AI may miss details in a PDF</h2>
-        <div class="label">Limitations / document review</div>
+        <h2 data-edit-slot="s7-title" data-slot-type="text" data-slot-label="Why AI often feels like it did not read the full PDF" data-slot-locked-layout="true">Why AI often feels like it did not read the full PDF</h2>
+        <div class="label">PDF reliability / analyst workflow</div>
       </div>
       <div class="flow-lane lane-weak card">
-        <div class="lane-label">Common chatbot behavior</div>
-        <div class="flow-step"><span>01</span><strong>Search relevant chunks</strong><p>Keywords or semantic matches are pulled from the PDF.</p></div>
-        <div class="flow-arrow">↓</div>
-        <div class="flow-step"><span>02</span><strong>Summarize fragments</strong><p>Unretrieved pages, tables, figures, maps, and appendices may never enter context.</p></div>
-        <div class="flow-arrow">↓</div>
-        <div class="flow-step danger"><span>03</span><strong>Sounds complete</strong><p>The answer can look like a full read while relying on partial evidence.</p></div>
+        <div class="lane-label">Why answers feel incomplete</div>
+        <div class="flow-step"><span>01</span><strong>Relevant snippets only</strong><p>Long PDFs are often searched first; pages with no matching chunks may never be seen.</p></div>
+        <div class="flow-step"><span>02</span><strong>Parsing gaps</strong><p>Tables, scans, maps, charts, page headers, and appendices can extract poorly.</p></div>
+        <div class="flow-step"><span>03</span><strong>Looks like full reading</strong><p>The model may infer structure from summaries, contents, or early sections.</p></div>
+        <div class="flow-step"><span>04</span><strong>Broad prompt bias</strong><p>"Summarize this PDF" overweights executive summary, intro, and conclusion.</p></div>
+        <div class="flow-step danger"><span>05</span><strong>No citation pressure</strong><p>Without page checks, answers become generalized and key pages can disappear.</p></div>
       </div>
       <div class="flow-lane lane-strong card ink">
-        <div class="lane-label">Better analyst / agent workflow</div>
-        <div class="flow-step"><span>01</span><strong>Read by section</strong><p>Chapter, method, metrics, data source, limitations.</p></div>
-        <div class="flow-arrow">↓</div>
-        <div class="flow-step"><span>02</span><strong>Check visual evidence</strong><p>Tables, figures, appendix, performance measures, maps.</p></div>
-        <div class="flow-arrow">↓</div>
-        <div class="flow-step good"><span>03</span><strong>Cite page evidence</strong><p>Every conclusion has page number, quote, or says not read.</p></div>
+        <div class="lane-label">Ask it to read like an analyst</div>
+        <div class="flow-step"><span>01</span><strong>Do not only summarize</strong><p>Explicitly say: do not stop at executive summary or narrative text.</p></div>
+        <div class="flow-step"><span>02</span><strong>Read by chapter</strong><p>For each chapter: main point, data source, methods, metrics, and limitations.</p></div>
+        <div class="flow-step"><span>03</span><strong>Inspect evidence objects</strong><p>Call out key tables, figures, maps, appendix items, and performance measures.</p></div>
+        <div class="flow-step"><span>04</span><strong>Use page discipline</strong><p>Attach page number, short quote, or source location to every claim.</p></div>
+        <div class="flow-step good"><span>05</span><strong>Admit unread gaps</strong><p>If a section was not read or parsed, require the model to say so.</p></div>
       </div>
       <div class="flow-note card">
-        <strong>Transportation reports need evidence discipline.</strong>
-        <span>For RIP, PROTECT, NCHRP, FHWA, and technical memos: require page checks, tables, figures, methodology, and appendix review.</span>
+        <strong>Transportation PDF prompt add-on</strong>
+        <span>For RIP, PROTECT, NCHRP, FHWA, and technical memos: check tables, figures, appendix, methodology, performance measures, data sources, and limitations.</span>
       </div>
     </div>
-    <aside class="speaker-notes" hidden>Use this as the reliability explanation. AI often behaves like retrieval plus summary, not page-by-page reading. For transportation reports, insist on sections, page citations, tables, figures, appendix, methods, metrics, and limitations.</aside>
+    <aside class="speaker-notes" hidden>This slide directly summarizes the PDF reliability issue. Explain that ordinary AI PDF reading is often retrieval plus summary, not page-by-page review. The better prompt forces chapter structure, data sources, methods, metrics, limitations, key tables and figures, and page evidence.</aside>
 
     <div class="load-chart" aria-hidden="true">
       <span style="--h:38%"></span><span style="--h:64%"></span><span style="--h:48%"></span><span style="--h:82%"></span><span style="--h:58%"></span>
