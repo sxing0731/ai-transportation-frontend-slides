@@ -495,43 +495,11 @@
   .slide.is-active .frame > *:nth-child(4) { transition-delay: .18s; }
   .slide.is-active .frame > *:nth-child(5) { transition-delay: .24s; }
   .slide.is-active .frame > *:nth-child(6) { transition-delay: .30s; }
-  .load-chart {
-    position: absolute;
-    right: clamp(1rem, 3vw, 2.4rem);
-    bottom: clamp(1rem, 3vh, 2.1rem);
-    width: clamp(92px, 9vw, 148px);
-    height: clamp(38px, 5vh, 58px);
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    align-items: end;
-    gap: 6px;
-    padding: 8px;
-    border: 1.5px solid rgba(184,255,0,.38);
-    background: rgba(16,43,52,.54);
-    backdrop-filter: blur(2px);
-    z-index: 3;
-    opacity: 0;
-    transform: translateY(12px);
+  .pagenum {
+    left: auto !important;
+    right: 0 !important;
+    bottom: 0 !important;
   }
-  .load-chart span {
-    display: block;
-    height: 10%;
-    background: var(--accent);
-    box-shadow: 0 0 14px rgba(184,255,0,.45);
-    transform-origin: bottom;
-  }
-  .slide.is-active .load-chart {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity .5s ease .36s, transform .5s ease .36s;
-  }
-  .slide.is-active .load-chart span {
-    animation: chartGrow .88s cubic-bezier(.16,1,.3,1) forwards, chartBlink 2.8s ease-in-out infinite;
-  }
-  .slide.is-active .load-chart span:nth-child(2) { animation-delay: .08s, 1.1s; }
-  .slide.is-active .load-chart span:nth-child(3) { animation-delay: .16s, 1.2s; }
-  .slide.is-active .load-chart span:nth-child(4) { animation-delay: .24s, 1.3s; }
-  .slide.is-active .load-chart span:nth-child(5) { animation-delay: .32s, 1.4s; }
   .slide.is-active .ai-img {
     animation: imageFloat 9s ease-in-out infinite;
   }
@@ -585,14 +553,6 @@
     0%, 100% { transform: translate3d(0,0,0) scale(.96); opacity: .20; }
     50% { transform: translate3d(-2.2vw, 2vh, 0) scale(1.03); opacity: .28; }
   }
-  @keyframes chartGrow {
-    from { height: 8%; transform: scaleY(.35); opacity: .45; }
-    to { height: var(--h); transform: scaleY(1); opacity: 1; }
-  }
-  @keyframes chartBlink {
-    0%, 100% { filter: brightness(1); }
-    50% { filter: brightness(1.35); }
-  }
   @keyframes cardCharge {
     0% {
       box-shadow: 0 0 0 rgba(184,255,0,0);
@@ -620,7 +580,6 @@
   .ai-stats .stat-big .v { font-size: clamp(5rem, 14vw, 12.5rem); }
   .label,
   .pagenum,
-  .load-chart,
   .s-stats .accent-l .lab,
   .s-cover .meta-l {
     font-size: clamp(1rem, 1.35vw, 1.35rem) !important;
@@ -803,8 +762,6 @@
     section.slide.is-active::after,
     .frame > *,
     .ai-img,
-    .load-chart,
-    .load-chart span,
     .slide.is-active .card,
     .slide.is-active .node,
     .slide.is-active .feat,
@@ -852,14 +809,6 @@
     html[data-mobile-adaptation="enabled"] .pagenum {
       font-size: clamp(.82rem, 3vw, 1rem) !important;
       padding: 8px 12px !important;
-    }
-    html[data-mobile-adaptation="enabled"] .load-chart {
-      width: 76px;
-      height: 34px;
-      right: 12px;
-      bottom: 12px;
-      gap: 4px;
-      padding: 6px;
     }
     html[data-mobile-adaptation="enabled"] .label,
     html[data-mobile-adaptation="enabled"] .s-process2 .node .n {
@@ -1120,8 +1069,7 @@
       inset: 12px 18px !important;
       gap: 8px !important;
     }
-    html[data-mobile-adaptation="enabled"] .pagenum,
-    html[data-mobile-adaptation="enabled"] .load-chart {
+    html[data-mobile-adaptation="enabled"] .pagenum {
       display: none !important;
     }
     html[data-mobile-adaptation="enabled"] .s-process2 .node p,
@@ -1879,9 +1827,6 @@
     </div>
     <aside class="speaker-notes" hidden>Open by acknowledging skepticism: most transportation professionals have seen AI as a chatbot. The point of this talk is practical workflow impact, not AI theory.</aside>
 
-    <div class="load-chart" aria-hidden="true">
-      <span style="--h:38%"></span><span style="--h:64%"></span><span style="--h:48%"></span><span style="--h:82%"></span><span style="--h:58%"></span>
-    </div>
     <div class="pagenum" data-edit-slot="s0-page" data-slot-type="metric" data-slot-label="01 / 10" data-slot-locked-layout="true">01 / 10</div>
     <div class="slide-edit-layer" aria-hidden="true"></div>
   </section>
@@ -1902,9 +1847,6 @@
     </div>
     <aside class="speaker-notes" hidden>Frame the business reason: AI matters where it removes friction from repetitive analysis, drafting, review, and documentation. It still needs professional review.</aside>
 
-    <div class="load-chart" aria-hidden="true">
-      <span style="--h:38%"></span><span style="--h:64%"></span><span style="--h:48%"></span><span style="--h:82%"></span><span style="--h:58%"></span>
-    </div>
     <div class="pagenum lemon" data-edit-slot="s1-page" data-slot-type="metric" data-slot-label="02 / 10" data-slot-locked-layout="true">02 / 10</div>
     <div class="slide-edit-layer" aria-hidden="true"></div>
   </section>
@@ -1923,9 +1865,6 @@
     </div>
     <aside class="speaker-notes" hidden>This slide is the central evolution story. Avoid AI architecture. Emphasize observable behavior: files, tools, checks, and output artifacts.</aside>
 
-    <div class="load-chart" aria-hidden="true">
-      <span style="--h:38%"></span><span style="--h:64%"></span><span style="--h:48%"></span><span style="--h:82%"></span><span style="--h:58%"></span>
-    </div>
     <div class="pagenum" data-edit-slot="s2-page" data-slot-type="metric" data-slot-label="03 / 10" data-slot-locked-layout="true">03 / 10</div>
     <div class="slide-edit-layer" aria-hidden="true"></div>
   </section>
@@ -1945,9 +1884,6 @@
     </div>
     <aside class="speaker-notes" hidden>Define the difference in practical terms. The professional still scopes the work, checks assumptions, and signs off on results.</aside>
 
-    <div class="load-chart" aria-hidden="true">
-      <span style="--h:38%"></span><span style="--h:64%"></span><span style="--h:48%"></span><span style="--h:82%"></span><span style="--h:58%"></span>
-    </div>
     <div class="pagenum lemon" data-edit-slot="s3-page" data-slot-type="metric" data-slot-label="04 / 10" data-slot-locked-layout="true">04 / 10</div>
     <div class="slide-edit-layer" aria-hidden="true"></div>
   </section>
@@ -1962,9 +1898,6 @@
     </div>
     <aside class="speaker-notes" hidden>Keep claims grounded. It can draft, organize, check, and automate. It cannot independently certify engineering decisions.</aside>
 
-    <div class="load-chart" aria-hidden="true">
-      <span style="--h:38%"></span><span style="--h:64%"></span><span style="--h:48%"></span><span style="--h:82%"></span><span style="--h:58%"></span>
-    </div>
     <div class="pagenum" data-edit-slot="s4-page" data-slot-type="metric" data-slot-label="05 / 10" data-slot-locked-layout="true">05 / 10</div>
     <div class="slide-edit-layer" aria-hidden="true"></div>
   </section>
@@ -1980,9 +1913,6 @@
     </div>
     <aside class="speaker-notes" hidden>Use examples the audience recognizes immediately. Each use case should sound like an extension of current work, not a futuristic replacement.</aside>
 
-    <div class="load-chart" aria-hidden="true">
-      <span style="--h:38%"></span><span style="--h:64%"></span><span style="--h:48%"></span><span style="--h:82%"></span><span style="--h:58%"></span>
-    </div>
     <div class="pagenum" data-edit-slot="s5-page" data-slot-type="metric" data-slot-label="06 / 10" data-slot-locked-layout="true">06 / 10</div>
     <div class="slide-edit-layer" aria-hidden="true"></div>
   </section>
@@ -2001,9 +1931,6 @@
     </div>
     <aside class="speaker-notes" hidden>The important distinction is flexibility. But flexibility also introduces variability, so QA is non-negotiable.</aside>
 
-    <div class="load-chart" aria-hidden="true">
-      <span style="--h:38%"></span><span style="--h:64%"></span><span style="--h:48%"></span><span style="--h:82%"></span><span style="--h:58%"></span>
-    </div>
     <div class="pagenum" data-edit-slot="s6-page" data-slot-type="metric" data-slot-label="07 / 10" data-slot-locked-layout="true">07 / 10</div>
     <div class="slide-edit-layer" aria-hidden="true"></div>
   </section>
@@ -2038,9 +1965,6 @@
     </div>
     <aside class="speaker-notes" hidden>This slide directly summarizes the PDF reliability issue. Explain that ordinary AI PDF reading is often retrieval plus summary, not page-by-page review. The better prompt forces chapter structure, data sources, methods, metrics, limitations, key tables and figures, and page evidence.</aside>
 
-    <div class="load-chart" aria-hidden="true">
-      <span style="--h:38%"></span><span style="--h:64%"></span><span style="--h:48%"></span><span style="--h:82%"></span><span style="--h:58%"></span>
-    </div>
     <div class="pagenum invert" data-edit-slot="s7-page" data-slot-type="metric" data-slot-label="08 / 10" data-slot-locked-layout="true">08 / 10</div>
     <div class="slide-edit-layer" aria-hidden="true"></div>
   </section>
@@ -2059,9 +1983,6 @@
     </div>
     <aside class="speaker-notes" hidden>The future role is not less professional expertise. It is more leverage for people who can scope, direct, and check AI-assisted work.</aside>
 
-    <div class="load-chart" aria-hidden="true">
-      <span style="--h:38%"></span><span style="--h:64%"></span><span style="--h:48%"></span><span style="--h:82%"></span><span style="--h:58%"></span>
-    </div>
     <div class="pagenum lemon" data-edit-slot="s8-page" data-slot-type="metric" data-slot-label="09 / 10" data-slot-locked-layout="true">09 / 10</div>
     <div class="slide-edit-layer" aria-hidden="true"></div>
   </section>
@@ -2083,9 +2004,6 @@
     </div>
     <aside class="speaker-notes" hidden>Close with adoption behavior: professionals who learn to use AI responsibly will likely outperform those who use it only as a search box.</aside>
 
-    <div class="load-chart" aria-hidden="true">
-      <span style="--h:38%"></span><span style="--h:64%"></span><span style="--h:48%"></span><span style="--h:82%"></span><span style="--h:58%"></span>
-    </div>
     <div class="pagenum invert" data-edit-slot="s9-page" data-slot-type="metric" data-slot-label="10 / 10" data-slot-locked-layout="true">10 / 10</div>
     <div class="slide-edit-layer" aria-hidden="true"></div>
   </section>
