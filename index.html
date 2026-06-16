@@ -611,6 +611,105 @@
     margin-top: 26px;
     max-width: 48ch;
   }
+  .ai-pdf-flow .flow-head {
+    grid-column: 1 / span 12;
+    grid-row: 1 / span 2;
+    padding: 26px 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 26px;
+  }
+  .ai-pdf-flow .flow-head h2 {
+    font-size: clamp(2.5rem, 5.4vw, 5.2rem);
+    line-height: .9;
+    text-transform: uppercase;
+    letter-spacing: -.02em;
+    margin: 0;
+  }
+  .ai-pdf-flow .flow-lane {
+    grid-row: 3 / span 5;
+    padding: 24px;
+    display: grid;
+    grid-template-rows: auto 1fr auto 1fr auto 1fr;
+    gap: 10px;
+    border: 1.5px solid rgba(234,244,246,.12);
+  }
+  .ai-pdf-flow .lane-weak { grid-column: 1 / span 6; }
+  .ai-pdf-flow .lane-strong { grid-column: 7 / span 6; }
+  .ai-pdf-flow .lane-label {
+    font-family: "JetBrains Mono", monospace;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    font-size: clamp(.85rem, 1.05vw, 1rem);
+    opacity: .76;
+  }
+  .ai-pdf-flow .flow-step {
+    background: rgba(16,43,52,.08);
+    border: 1.5px solid rgba(16,43,52,.24);
+    padding: 14px 16px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 12px;
+    align-content: center;
+  }
+  .ai-pdf-flow .lane-strong .flow-step {
+    background: rgba(234,244,246,.08);
+    border-color: rgba(184,255,0,.28);
+  }
+  .ai-pdf-flow .flow-step span {
+    font-family: "JetBrains Mono", monospace;
+    color: var(--accent);
+    font-size: clamp(.9rem, 1.15vw, 1.05rem);
+    line-height: 1.25;
+  }
+  .ai-pdf-flow .flow-step strong {
+    font-size: clamp(1.15rem, 1.65vw, 1.55rem);
+    line-height: 1.05;
+    text-transform: uppercase;
+  }
+  .ai-pdf-flow .flow-step p {
+    grid-column: 2;
+    margin: 5px 0 0;
+    font-size: clamp(.92rem, 1.25vw, 1.12rem);
+    line-height: 1.32;
+  }
+  .ai-pdf-flow .flow-step.danger {
+    background: rgba(16,43,52,.18);
+    box-shadow: inset 8px 0 0 #D7EEF2;
+  }
+  .ai-pdf-flow .flow-step.good {
+    background: rgba(184,255,0,.14);
+    box-shadow: inset 8px 0 0 var(--accent);
+  }
+  .ai-pdf-flow .flow-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "JetBrains Mono", monospace;
+    font-size: clamp(1rem, 1.5vw, 1.35rem);
+    color: var(--accent);
+  }
+  .ai-pdf-flow .flow-note {
+    grid-column: 1 / span 12;
+    grid-row: 8 / span 1;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    border-top: 6px solid var(--accent);
+  }
+  .ai-pdf-flow .flow-note strong {
+    font-size: clamp(1.05rem, 1.55vw, 1.4rem);
+    text-transform: uppercase;
+    line-height: 1.08;
+  }
+  .ai-pdf-flow .flow-note span {
+    font-size: clamp(.96rem, 1.28vw, 1.15rem);
+    line-height: 1.35;
+    max-width: 68ch;
+  }
   .ai-close .left { grid-column: 1 / span 7; grid-row: 1 / span 6; background: var(--ink); color: var(--paper); padding: 36px; }
   .ai-close .left h2 { font-size: clamp(3rem, 7vw, 6.8rem); line-height: .88; text-transform: uppercase; }
   .ai-close .steps { margin-top: 32px; display: grid; gap: 14px; }
@@ -835,21 +934,53 @@
     html[data-mobile-adaptation="enabled"] .ai-usecases .callout {
       display: none !important;
     }
-    html[data-mobile-adaptation="enabled"] .ai-limits .photo {
+    html[data-mobile-adaptation="enabled"] .ai-pdf-flow .flow-head {
       grid-column: 1 / span 2 !important;
-      grid-row: 1 / span 4 !important;
+      grid-row: 1 / span 2 !important;
+      padding: 16px 18px !important;
+      display: block !important;
     }
-    html[data-mobile-adaptation="enabled"] .ai-limits .quote {
+    html[data-mobile-adaptation="enabled"] .ai-pdf-flow .flow-head h2 {
+      font-size: clamp(1.65rem, 7vw, 2.55rem) !important;
+    }
+    html[data-mobile-adaptation="enabled"] .ai-pdf-flow .flow-lane {
       grid-column: 1 / span 2 !important;
-      grid-row: 5 / span 4 !important;
-      padding: 18px !important;
+      grid-row: auto / span 3 !important;
+      padding: 12px !important;
+      gap: 5px !important;
     }
-    html[data-mobile-adaptation="enabled"] .ai-limits .quote .q {
-      font-size: clamp(1.9rem, 8vw, 3rem) !important;
+    html[data-mobile-adaptation="enabled"] .ai-pdf-flow .lane-label {
+      font-size: clamp(.66rem, 2.4vw, .82rem) !important;
     }
-    html[data-mobile-adaptation="enabled"] .ai-limits .byline {
-      font-size: clamp(.92rem, 3.4vw, 1.1rem) !important;
-      margin-top: 14px !important;
+    html[data-mobile-adaptation="enabled"] .ai-pdf-flow .flow-step {
+      padding: 8px 10px !important;
+      column-gap: 8px !important;
+    }
+    html[data-mobile-adaptation="enabled"] .ai-pdf-flow .flow-step strong {
+      font-size: clamp(.86rem, 3vw, 1.02rem) !important;
+    }
+    html[data-mobile-adaptation="enabled"] .ai-pdf-flow .flow-step p {
+      font-size: clamp(.72rem, 2.55vw, .86rem) !important;
+      line-height: 1.2 !important;
+      margin-top: 2px !important;
+    }
+    html[data-mobile-adaptation="enabled"] .ai-pdf-flow .flow-arrow {
+      display: none !important;
+    }
+    html[data-mobile-adaptation="enabled"] .ai-pdf-flow .flow-note {
+      grid-column: 1 / span 2 !important;
+      grid-row: 9 / span 1 !important;
+      padding: 10px 12px !important;
+      display: block !important;
+    }
+    html[data-mobile-adaptation="enabled"] .ai-pdf-flow .flow-note strong {
+      display: block !important;
+      font-size: clamp(.82rem, 2.8vw, .98rem) !important;
+      margin-bottom: 4px !important;
+    }
+    html[data-mobile-adaptation="enabled"] .ai-pdf-flow .flow-note span {
+      font-size: clamp(.72rem, 2.4vw, .86rem) !important;
+      line-height: 1.2 !important;
     }
     html[data-mobile-adaptation="enabled"] .s-matrix2 .table {
       grid-column: 1 / span 2 !important;
@@ -1790,16 +1921,35 @@
     <div class="slide-edit-layer" aria-hidden="true"></div>
   </section>
 
-<section class="slide s-quote ai-limits" data-label="08 Limits" data-om-validate="false" id="slide-7" data-template-slide-index="8">
+<section class="slide s-quote ai-limits ai-pdf-flow" data-label="08 Limits" data-om-validate="false" id="slide-7" data-template-slide-index="8">
 
     <div class="frame">
-      <div class="photo"><div class="ph ai-img" style="background-image:url('assets/ai_portrait_review_3x4.png')" data-edit-slot="s7-image" data-slot-type="image" data-slot-label="Portrait 3:4 human checking AI transportation output" data-slot-locked-layout="true"></div></div>
-      <div class="quote">
-        <div class="q" data-edit-slot="s7-quote" data-slot-type="text" data-slot-label="AI is useful when the task is bounded. It is risky when the responsibility is va" data-slot-locked-layout="true">AI is useful when the task is bounded. It is risky when the responsibility is vague.</div>
-        <div class="byline">Where AI is not good: final engineering judgment, stakeholder trust, liability, project management, and QA ownership.</div>
+      <div class="flow-head card lemon">
+        <h2 data-edit-slot="s7-title" data-slot-type="text" data-slot-label="Why AI may miss details in a PDF" data-slot-locked-layout="true">Why AI may miss details in a PDF</h2>
+        <div class="label">Limitations / document review</div>
+      </div>
+      <div class="flow-lane lane-weak card">
+        <div class="lane-label">Common chatbot behavior</div>
+        <div class="flow-step"><span>01</span><strong>Search relevant chunks</strong><p>Keywords or semantic matches are pulled from the PDF.</p></div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step"><span>02</span><strong>Summarize fragments</strong><p>Unretrieved pages, tables, figures, maps, and appendices may never enter context.</p></div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step danger"><span>03</span><strong>Sounds complete</strong><p>The answer can look like a full read while relying on partial evidence.</p></div>
+      </div>
+      <div class="flow-lane lane-strong card ink">
+        <div class="lane-label">Better analyst / agent workflow</div>
+        <div class="flow-step"><span>01</span><strong>Read by section</strong><p>Chapter, method, metrics, data source, limitations.</p></div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step"><span>02</span><strong>Check visual evidence</strong><p>Tables, figures, appendix, performance measures, maps.</p></div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step good"><span>03</span><strong>Cite page evidence</strong><p>Every conclusion has page number, quote, or says not read.</p></div>
+      </div>
+      <div class="flow-note card">
+        <strong>Transportation reports need evidence discipline.</strong>
+        <span>For RIP, PROTECT, NCHRP, FHWA, and technical memos: require page checks, tables, figures, methodology, and appendix review.</span>
       </div>
     </div>
-    <aside class="speaker-notes" hidden>This slide should reassure skeptical professionals. The message is not blind adoption; it is structured use with quality controls.</aside>
+    <aside class="speaker-notes" hidden>Use this as the reliability explanation. AI often behaves like retrieval plus summary, not page-by-page reading. For transportation reports, insist on sections, page citations, tables, figures, appendix, methods, metrics, and limitations.</aside>
 
     <div class="load-chart" aria-hidden="true">
       <span style="--h:38%"></span><span style="--h:64%"></span><span style="--h:48%"></span><span style="--h:82%"></span><span style="--h:58%"></span>
