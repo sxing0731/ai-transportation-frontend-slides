@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-Hans" data-deck-id="ai-transportation-neo-grid-bold" data-template-source="neo-grid-bold" data-template-edit-mode="slots" data-mobile-adaptation="desktop-default">
+<html lang="zh-Hans" data-deck-id="ai-transportation-neo-grid-bold" data-template-source="neo-grid-bold" data-template-edit-mode="slots" data-mobile-adaptation="enabled">
 <head>
 
 <meta charset="utf-8" />
@@ -634,6 +634,283 @@
       transition-duration: .01ms !important;
       transform: none !important;
       opacity: 1 !important;
+    }
+  }
+
+  /* === MOBILE ADAPTATION: PHONE PORTRAIT + LANDSCAPE === */
+  @media (max-width: 760px) {
+    html[data-mobile-adaptation="enabled"] {
+      scroll-snap-type: y mandatory;
+    }
+    html[data-mobile-adaptation="enabled"] body.deck-sidebar-open .slides-offset {
+      padding-right: 0 !important;
+    }
+    html[data-mobile-adaptation="enabled"] .slide-sidebar {
+      width: min(86vw, 340px) !important;
+    }
+    html[data-mobile-adaptation="enabled"] #deck.slides-offset > section.slide {
+      min-height: 100dvh !important;
+    }
+    html[data-mobile-adaptation="enabled"] section.slide::after {
+      width: 118vw;
+      right: -54vw;
+      top: -18vh;
+      opacity: .16;
+    }
+    html[data-mobile-adaptation="enabled"] .frame {
+      inset: clamp(14px, 4vw, 24px) !important;
+      display: grid !important;
+      grid-template-columns: 1fr 1fr !important;
+      grid-template-rows: repeat(10, 1fr) !important;
+      gap: clamp(8px, 2vw, 12px) !important;
+    }
+    html[data-mobile-adaptation="enabled"] .pagenum {
+      font-size: clamp(.82rem, 3vw, 1rem) !important;
+      padding: 8px 12px !important;
+    }
+    html[data-mobile-adaptation="enabled"] .load-chart {
+      width: 76px;
+      height: 34px;
+      right: 12px;
+      bottom: 12px;
+      gap: 4px;
+      padding: 6px;
+    }
+    html[data-mobile-adaptation="enabled"] .label,
+    html[data-mobile-adaptation="enabled"] .s-process2 .node .n {
+      font-size: clamp(.72rem, 2.5vw, .92rem) !important;
+    }
+    html[data-mobile-adaptation="enabled"] .ai-cover .panel-photo-l {
+      grid-column: 1 / span 1 !important;
+      grid-row: 1 / span 4 !important;
+    }
+    html[data-mobile-adaptation="enabled"] .ai-cover .panel-mid {
+      grid-column: 2 / span 1 !important;
+      grid-row: 1 / span 2 !important;
+    }
+    html[data-mobile-adaptation="enabled"] .ai-cover .panel-titletile {
+      grid-column: 1 / span 2 !important;
+      grid-row: 5 / span 3 !important;
+    }
+    html[data-mobile-adaptation="enabled"] .ai-cover .panel-photo-r {
+      grid-column: 2 / span 1 !important;
+      grid-row: 3 / span 2 !important;
+    }
+    html[data-mobile-adaptation="enabled"] .ai-cover .panel-cap {
+      grid-column: 1 / span 2 !important;
+      grid-row: 8 / span 2 !important;
+    }
+    html[data-mobile-adaptation="enabled"] .ai-cover .title {
+      font-size: clamp(2rem, 9vw, 3.2rem) !important;
+    }
+    html[data-mobile-adaptation="enabled"] .ai-cover .title-block {
+      left: 20px !important;
+      right: 20px !important;
+      bottom: 22px !important;
+    }
+    html[data-mobile-adaptation="enabled"] .ai-stats .accent-l,
+    html[data-mobile-adaptation="enabled"] .s-stats .accent-l {
+      grid-column: 1 / span 2 !important;
+      grid-row: 1 / span 1 !important;
+    }
+    html[data-mobile-adaptation="enabled"] .ai-stats .copy,
+    html[data-mobile-adaptation="enabled"] .s-stats .copy {
+      grid-column: 1 / span 2 !important;
+      grid-row: 2 / span 4 !important;
+      padding: 18px !important;
+    }
+    html[data-mobile-adaptation="enabled"] .s-stats .copy h2 {
+      font-size: clamp(2.1rem, 10vw, 3.5rem) !important;
+    }
+    html[data-mobile-adaptation="enabled"] .s-stats .copy p {
+      font-size: clamp(.98rem, 3.6vw, 1.18rem) !important;
+      margin-top: 12px !important;
+    }
+    html[data-mobile-adaptation="enabled"] .s-stats .stat-a,
+    html[data-mobile-adaptation="enabled"] .s-stats .stat-b,
+    html[data-mobile-adaptation="enabled"] .s-stats .stat-c {
+      grid-row: 6 / span 2 !important;
+      padding: 14px !important;
+    }
+    html[data-mobile-adaptation="enabled"] .s-stats .stat-a { grid-column: 1 / span 1 !important; }
+    html[data-mobile-adaptation="enabled"] .s-stats .stat-b { grid-column: 2 / span 1 !important; }
+    html[data-mobile-adaptation="enabled"] .s-stats .stat-c { display: none !important; }
+    html[data-mobile-adaptation="enabled"] .s-stats .stat-num.sm {
+      font-size: clamp(2.2rem, 12vw, 4rem) !important;
+    }
+    html[data-mobile-adaptation="enabled"] .s-stats .stat-big {
+      grid-column: 1 / span 2 !important;
+      grid-row: 8 / span 2 !important;
+      padding: 16px !important;
+    }
+    html[data-mobile-adaptation="enabled"] .s-stats .stat-big .v {
+      font-size: clamp(3.4rem, 18vw, 6rem) !important;
+    }
+    html[data-mobile-adaptation="enabled"] .s-process2 .head,
+    html[data-mobile-adaptation="enabled"] .s-features .head,
+    html[data-mobile-adaptation="enabled"] .s-matrix2 .head {
+      grid-column: 1 / span 2 !important;
+      grid-row: 1 / span 2 !important;
+      padding: 16px 18px !important;
+      gap: 12px !important;
+    }
+    html[data-mobile-adaptation="enabled"] .s-process2 .head h2,
+    html[data-mobile-adaptation="enabled"] .s-features .head h2,
+    html[data-mobile-adaptation="enabled"] .s-matrix2 .head h2 {
+      font-size: clamp(1.8rem, 8vw, 3rem) !important;
+      line-height: .95 !important;
+    }
+    html[data-mobile-adaptation="enabled"] .s-process2 .head .sub,
+    html[data-mobile-adaptation="enabled"] .s-matrix2 .head .sub {
+      display: none !important;
+    }
+    html[data-mobile-adaptation="enabled"] .s-process2 .node {
+      padding: 14px !important;
+      gap: 8px !important;
+    }
+    html[data-mobile-adaptation="enabled"] .s-process2 .node h3 {
+      font-size: clamp(1rem, 3.8vw, 1.28rem) !important;
+    }
+    html[data-mobile-adaptation="enabled"] .s-process2 .node p {
+      font-size: clamp(.82rem, 3vw, 1rem) !important;
+      line-height: 1.28 !important;
+    }
+    html[data-mobile-adaptation="enabled"] .s-process2 .node.n1 { grid-column: 1 / span 1 !important; grid-row: 3 / span 2 !important; }
+    html[data-mobile-adaptation="enabled"] .s-process2 .node.n2 { grid-column: 2 / span 1 !important; grid-row: 3 / span 2 !important; }
+    html[data-mobile-adaptation="enabled"] .s-process2 .node.n3 { grid-column: 1 / span 1 !important; grid-row: 5 / span 2 !important; }
+    html[data-mobile-adaptation="enabled"] .s-process2 .node.n4 { grid-column: 2 / span 1 !important; grid-row: 5 / span 2 !important; }
+    html[data-mobile-adaptation="enabled"] .s-process2 .node.n5 { grid-column: 1 / span 1 !important; grid-row: 7 / span 2 !important; }
+    html[data-mobile-adaptation="enabled"] .s-process2 .node.out { grid-column: 2 / span 1 !important; grid-row: 7 / span 2 !important; }
+    html[data-mobile-adaptation="enabled"] .s-process2 .timeline {
+      grid-column: 1 / span 2 !important;
+      grid-row: 9 / span 1 !important;
+      padding: 10px 12px !important;
+      grid-template-columns: repeat(3, 1fr) !important;
+      font-size: clamp(.62rem, 2.2vw, .78rem) !important;
+    }
+    html[data-mobile-adaptation="enabled"] .s-process2 .node .arr {
+      display: none !important;
+    }
+    html[data-mobile-adaptation="enabled"] .s-features .feat {
+      grid-column: 1 / span 2 !important;
+      grid-row: auto / span 2 !important;
+      padding: 14px !important;
+      display: grid !important;
+      grid-template-columns: 34% 1fr !important;
+      gap: 12px !important;
+      align-items: center !important;
+    }
+    html[data-mobile-adaptation="enabled"] .s-features .feat .pic {
+      width: 100%;
+      aspect-ratio: 1 / 1 !important;
+    }
+    html[data-mobile-adaptation="enabled"] .s-features .feat h3 {
+      font-size: clamp(1.05rem, 4vw, 1.3rem) !important;
+    }
+    html[data-mobile-adaptation="enabled"] .s-features .feat p {
+      font-size: clamp(.82rem, 3vw, 1rem) !important;
+      line-height: 1.28 !important;
+    }
+    html[data-mobile-adaptation="enabled"] .ai-usecases .header {
+      grid-column: 1 / span 2 !important;
+      grid-row: 1 / span 2 !important;
+      padding: 18px !important;
+    }
+    html[data-mobile-adaptation="enabled"] .ai-usecases .header h2 {
+      font-size: clamp(1.9rem, 8vw, 3rem) !important;
+    }
+    html[data-mobile-adaptation="enabled"] .ai-usecases .col {
+      grid-column: 1 / span 2 !important;
+      grid-row: auto / span 2 !important;
+      padding: 16px 18px !important;
+      gap: 10px !important;
+    }
+    html[data-mobile-adaptation="enabled"] .ai-usecases .col h3 {
+      font-size: clamp(1.1rem, 4vw, 1.35rem) !important;
+    }
+    html[data-mobile-adaptation="enabled"] .ai-usecases .col li {
+      font-size: clamp(.82rem, 3vw, 1rem) !important;
+      margin-bottom: 2px !important;
+    }
+    html[data-mobile-adaptation="enabled"] .ai-usecases .callout {
+      display: none !important;
+    }
+    html[data-mobile-adaptation="enabled"] .ai-limits .photo {
+      grid-column: 1 / span 2 !important;
+      grid-row: 1 / span 4 !important;
+    }
+    html[data-mobile-adaptation="enabled"] .ai-limits .quote {
+      grid-column: 1 / span 2 !important;
+      grid-row: 5 / span 4 !important;
+      padding: 18px !important;
+    }
+    html[data-mobile-adaptation="enabled"] .ai-limits .quote .q {
+      font-size: clamp(1.9rem, 8vw, 3rem) !important;
+    }
+    html[data-mobile-adaptation="enabled"] .ai-limits .byline {
+      font-size: clamp(.92rem, 3.4vw, 1.1rem) !important;
+      margin-top: 14px !important;
+    }
+    html[data-mobile-adaptation="enabled"] .s-matrix2 .table {
+      grid-column: 1 / span 2 !important;
+      grid-row: 3 / span 6 !important;
+      grid-template-columns: 1fr 1fr !important;
+      overflow: hidden !important;
+    }
+    html[data-mobile-adaptation="enabled"] .s-matrix2 .table .cell {
+      font-size: clamp(.72rem, 2.55vw, .9rem) !important;
+      padding: 8px 9px !important;
+      line-height: 1.2 !important;
+    }
+    html[data-mobile-adaptation="enabled"] .s-matrix2 .table .cell:nth-child(n+13) {
+      display: none !important;
+    }
+    html[data-mobile-adaptation="enabled"] .s-matrix2 .pill {
+      font-size: clamp(.62rem, 2.2vw, .78rem) !important;
+      padding: 4px 7px !important;
+    }
+    html[data-mobile-adaptation="enabled"] .ai-close .left {
+      grid-column: 1 / span 2 !important;
+      grid-row: 1 / span 5 !important;
+      padding: 18px !important;
+    }
+    html[data-mobile-adaptation="enabled"] .ai-close .left h2 {
+      font-size: clamp(2rem, 9vw, 3.4rem) !important;
+    }
+    html[data-mobile-adaptation="enabled"] .ai-close .steps {
+      margin-top: 18px !important;
+      gap: 8px !important;
+    }
+    html[data-mobile-adaptation="enabled"] .ai-close .steps div {
+      font-size: clamp(.88rem, 3.2vw, 1.08rem) !important;
+      padding-top: 8px !important;
+    }
+    html[data-mobile-adaptation="enabled"] .ai-close .right {
+      grid-column: 1 / span 2 !important;
+      grid-row: 6 / span 2 !important;
+    }
+    html[data-mobile-adaptation="enabled"] .ai-close .bottom {
+      grid-column: 1 / span 2 !important;
+      grid-row: 8 / span 2 !important;
+    }
+    html[data-mobile-adaptation="enabled"] .ai-close .bottom h3 {
+      font-size: clamp(5rem, 22vw, 8rem) !important;
+    }
+  }
+
+  @media (max-height: 520px) and (orientation: landscape) {
+    html[data-mobile-adaptation="enabled"] .frame {
+      inset: 12px 18px !important;
+      gap: 8px !important;
+    }
+    html[data-mobile-adaptation="enabled"] .pagenum,
+    html[data-mobile-adaptation="enabled"] .load-chart {
+      display: none !important;
+    }
+    html[data-mobile-adaptation="enabled"] .s-process2 .node p,
+    html[data-mobile-adaptation="enabled"] .s-features .feat p,
+    html[data-mobile-adaptation="enabled"] .ai-usecases .col li {
+      font-size: clamp(.68rem, 1.7vw, .86rem) !important;
     }
   }
 
